@@ -1,0 +1,95 @@
+ion-header {
+    font-family: 'poppins', sans-serif;
+    ion-icon {
+        font-size: 30px;
+        position: relative;
+        margin-left: 10px;
+    }
+    #notification-badge-msg {
+        background-color: #ee9e0b;
+        position: absolute;
+        top: 5px;
+        right: 95px;
+        Color: #fff;
+        z-index: 111;
+    }
+    #notification-badge {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right: 45px;
+        Color: #fff;
+        z-index: 111;
+    }
+    img {
+        width: 35px;
+        height: 45px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+}
+
+ion-content {
+    font-family: 'poppins', sans-serif;
+    --background-color: #f9f9f9;
+    h4 {
+        padding: 5px 0px 0px;
+    }
+    .top {
+        --background-color: #f9f9f9;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 2.6px;
+        height: 150px;
+        display: grid;
+        grid-template-columns: 30% 45% 25%;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "image desc edit" "image desc edit";
+        align-items: center;
+        justify-self: center;
+        .image {
+            grid-area: image;
+            img {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+        }
+        .desc {
+            grid-area: desc;
+            justify-self: start;
+            padding: 10px 50px 10px 1px;
+            h2 {
+                color: gray;
+                margin-top: 10px;
+            }
+        }
+        .edit {
+            grid-area: edit;
+            margin-right: 40px;
+            ion-button {
+                --border-radius: 20px;
+            }
+        }
+    }
+    .UpperBox {
+        background-color: #fff;
+        margin-top: 20px;
+        box-shadow: rgb(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        margin-bottom: 60px;
+        ion-icon {
+            font-size: 24px;
+            color: #9e54f3;
+        }
+        img {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            color: #9e54f3;
+        }
+    }
+}

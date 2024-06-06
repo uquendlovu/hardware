@@ -1,0 +1,76 @@
+<ion-content>
+
+  
+
+    <div class="middle">
+        <div class="box">
+            <form #loginForm="ngForm">
+                <h1 align="center"> Customer Registration</h1>
+                <ion-item>
+                    <ion-label position="floating">Name</ion-label>
+                    <ion-input type="text" Placeholder="name" name="name" #name="ngModel" [(ngModel)]="user.name" required #inputUser></ion-input>
+                    <ion-icon class="ion-align-self-center" slot="end" name="person"></ion-icon>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label position="floating">Surname</ion-label>
+                    <ion-input type="text" Placeholder="surname" name="surname" #surname="ngModel" [(ngModel)]="user.surname" required></ion-input>
+                    <ion-icon class="ion-align-self-center" slot="end" name="person"></ion-icon>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label position="floating">Username</ion-label>
+                    <ion-input type="text" Placeholder="username" name="username" #username="ngModel" [(ngModel)]="user.username" required></ion-input>
+                    <ion-icon class="ion-align-self-center" slot="end" name="person"></ion-icon>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label position="floating">Contact</ion-label>
+                    <ion-input type="text" Placeholder="contact" name="contact" #contact="ngModel" [(ngModel)]="user.contact" required></ion-input>
+                    <ion-icon class="ion-align-self-center" slot="end" name="call"></ion-icon>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label position="floating">Email Address</ion-label>
+                    <ion-input type="email" id="email" Placeholder="Email" name="email" #email="ngModel" [(ngModel)]="user.email" required email></ion-input>
+                    <ion-icon class="ion-align-self-center" slot="end" name="mail"></ion-icon>
+                </ion-item>
+
+
+
+                <ion-item>
+                    <ion-label position="floating">Password</ion-label>
+                    <ion-input [type]="type ? 'password' : 'text'" id="password" Placeholder="Password" name="password" #password="ngModel" [(ngModel)]="user.password" required password></ion-input>
+                    <ion-icon class="ion-align-self-center" slot="end" name="lock-closed" (click)="changeType()"></ion-icon>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label position="floating">Confirm Password</ion-label>
+                    <ion-input [type]="type ? 'password' : 'text'" Placeholder=" Confirm Password" name="cPassword" #cPassword="ngModel" [(ngModel)]="user.cPass" required password></ion-input>
+                    <ion-icon class="ion-align-self-center" slot="end" name="lock-closed" (click)="changeType()"></ion-icon>
+                </ion-item>
+
+                <div class="btn">
+                    <ion-button shape="round" block="expand" (click)="navigateDetails()">SIGNUP</ion-button>
+
+                </div>
+
+                <div class="btn">
+                    <ion-button shape="round" expand="block" (click)="goToSignIn()" >Already have an account</ion-button>
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+</ion-content>
+
+
+

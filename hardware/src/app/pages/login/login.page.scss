@@ -1,0 +1,79 @@
+h1 {
+    font-weight: bolder;
+
+}
+
+
+ion-content {
+    --background: #f8faf9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+
+    
+    img {
+        height: 33%;
+        width: 100%;
+        
+    }
+    .upper {
+        width: 100%;
+        height: 200px;
+        padding-top: 50px;
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ion-icon {
+                font-size: 50px;
+                color: #fff;
+            }
+        }
+        #login {
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+    .middle {
+        padding: 20px;
+        .box {
+            border-radius: 10px;
+            height: auto;
+            background: #fff;
+            padding: 20px;
+        }
+        p {
+            color: rgb(185, 90, 90);
+            text-align: center;
+        }
+        ion-item {
+            ion-icon {
+                color: rgb(82, 191, 218, 0.932);
+            }
+        }
+        #forgetPassword {
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(44, 44, 204);
+            text-align: end;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            ion-button {
+                --background: #09a79ffd;
+            }
+        }
+    }
+}
+
+.scroll-content {
+    overflow-y: hidden;
+}
+
+.content-with-full-height {
+    height: 100%;
+}

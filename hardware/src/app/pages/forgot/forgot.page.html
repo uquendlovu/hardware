@@ -1,0 +1,88 @@
+<ion-content>
+    <div class="middle">
+        <div class="box">
+            <form #loginForm="ngForm">
+                <p class="back">ACCOMODATION 101 ONLINE BOOKING</p>
+
+                <ion-item>
+                    <ion-label position="floating">Email Address</ion-label>
+                    <ion-input type="email" Placeholder="Email" id="email" name="email" #email="ngModel" [(ngModel)]="user.username" required email></ion-input>
+                    <ion-icon class="ion-align-self-center" slot="end" name="mail"></ion-icon>
+                </ion-item>
+
+                <div class="btn">
+                    <ion-button (click)="recovery()">Reset</ion-button>
+                </div>
+
+            </form>
+            <div align="center">
+
+            </div>
+            <div class="back">
+                <p (click)="register()">Return To Login</p>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+
+
+
+<!--<ion-content>
+  <div class="upper">
+      <div class="icon">
+          <ion-icon name="construct"></ion-icon>
+      </div>
+      <p id="login" style="color:azure">HARDWARE STORE APP</p>
+  </div>
+
+  <div class="middle">
+      <div class="box">
+          <form #loginForm="ngForm">
+              <p>Please login to your account</p>
+
+              <ion-item>
+                  <ion-label position="floating">Email Address</ion-label>
+                  <ion-input type="email" Placeholder="Email" name="email" #email="ngModel" [(ngModel)]="login.email" required email></ion-input>
+                  <ion-icon class="ion-align-self-center" slot="end" name="mail"></ion-icon>
+              </ion-item>
+
+              <div *ngIf="email.invalid && email.touched">
+                  <ion-text color="danger text-center">
+                      <h4 style="padding-left: 20px; margin-top: 10px;">Please enter email address</h4>
+                  </ion-text>
+              </div>
+
+              <ion-item>
+                  <ion-label position="floating">Password</ion-label>
+                  <ion-input [type]="type ? 'password' : 'text'" Placeholder="Password" name="password" #password="ngModel" [(ngModel)]="login.password" required password></ion-input>
+                  <ion-icon class="ion-align-self-center" slot="end" name="eye" (click)="changeType()"></ion-icon>
+              </ion-item>
+
+              <div *ngIf="password.invalid && password.touched">
+                  <ion-text color="danger text-center">
+                      <h4 style="padding-left: 20px; margin-top: 10px;">Please enter password</h4>
+                  </ion-text>
+              </div>
+
+              <p id="forgetPassword" (click)="goToForget()"> Forgot Password</p>
+
+              <div class="btn">
+                  <ion-button (click)="goToHome()" [disabled]="loginForm.invalid">LOGIN</ion-button>
+              </div>
+
+          </form>
+          <div align="center">
+              <img src="../assets/img/lock2.gif" />
+              <div class="socialMedia">
+                  <ion-icon slot="end" name="logo-facebook" (click)="changeType()"></ion-icon>
+                  <ion-icon slot="end" name="logo-twitter" (click)="changeType()"></ion-icon>
+                  <ion-icon slot="end" name="logo-google" (click)="changeType()"></ion-icon>
+              </div>
+
+          </div>
+          <p (click)="register()">Click me to create an account</p>
+      </div>
+
+  </div>
+</ion-content>-->

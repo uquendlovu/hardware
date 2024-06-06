@@ -1,0 +1,135 @@
+<ion-header>
+    <ion-toolbar style="color:#2e0e8b;">
+        <ion-button slot="start" class="menu_btn" color="light">
+            <ion-back-button color="secondary" defaultHref="home"></ion-back-button>
+        </ion-button>
+        <ion-title>
+            <h1 align="center">PRODUCTS</h1>
+        </ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row class="grid">
+            <ion-col>
+                <div>
+                    prodID
+                </div>
+
+            </ion-col>
+            <ion-col>
+                <div>
+                    Descr
+                </div>
+
+            </ion-col>
+            <ion-col>
+                <div>
+                    Price
+                </div>
+
+            </ion-col>
+            <ion-col>
+                <div>
+                    Action
+                </div>
+
+            </ion-col>
+        </ion-row>
+        <ion-row lines="inset" *ngFor="let product of products">
+            <ion-col>
+                <div>
+                    <h5>{{product.prodID}} </h5>
+                </div>
+
+            </ion-col>
+            <ion-col>
+                <div>
+                    <h5>{{product.prodDescription}} </h5>
+                </div>
+
+            </ion-col>
+            <ion-col>
+                <div>
+                    <h5>R{{product.price}} </h5>
+                </div>
+
+            </ion-col>
+            <ion-col>
+                <div class="item-note">
+                    <ion-icon name="trash" style="zoom: 2.0;" (click)="deleteStudent(product.prodID)"></ion-icon>
+                    <div class="edit">
+                        <div class="wrapper">
+                            <span style="color:rgb(252, 9, 9); font-size:50pt" class="minus" (click)="remove(i)">-</span>
+                            <span class="num">cart</span>
+                            <span style="color:rgb(81, 211, 55); font-size: 30pt" class="plus" (click)="add(i)">+</span>
+                        </div>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+    <div class="order_summary">
+        <h3>Order</h3>
+        <p>Booked<span> {{total_amt | number : '1.2-2'}}</span></p>
+        <p>Period of Booking 
+            <ion-input color="light" placeholder="(1Year/s) / (1Week/s) / (1Day/s)"></ion-input>
+        </p>
+        <ion-card>
+            <img src="assets/img/KZN.jpg">
+                <div color="secondary" class="card-title">
+                    <a href="#home">Book</a>
+                    <p>Kwazulu, Umlazi, SA<br>R1 500</p>
+                    <br>
+                    <p>Address: 76 Kirk Road</p>
+                </div>
+        </ion-card>
+
+        <br>
+
+        <ion-card>
+            <img src="assets/img/images.jpg">
+                <div color="secondary" class="card-title">
+                    <a href="#home">Book</a>
+                    <p>KwaZuluNatal, Montclair, SA<br>R1 900</p>
+                    <br>
+                    <p>Address: Yellow Wood Park</p>
+                </div>
+        </ion-card>
+
+        <br>
+
+        <ion-card>
+            <img src="assets/img/hanover.png">
+                <div color="secondary" class="card-title">
+                    <a href="#home">Book</a>
+                    <p>Midrand, New Hanover, SA <br>R2100</p>
+                    <br>
+                    <p>Address: 236 Gazania</p>
+                </div>
+        </ion-card>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="dark">
+        <ion-row>
+            <ion-col style="background-color: rgb(145, 14, 14)" size="7">
+                <ion-text color="light">
+                    <h4>Total : R{{total_amt | number : '1.2-2'}}</h4>
+                </ion-text>
+            </ion-col>
+
+            <ion-col style="background-color: rgb(61, 170, 11)" size="5">
+                <p class="ion-text-right ion-padding-end" (click)="purchase()">PAY
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </p>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

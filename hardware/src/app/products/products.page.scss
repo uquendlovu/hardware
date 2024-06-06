@@ -1,0 +1,156 @@
+.grid {
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    border-color: rgb(255, 254, 255);
+    border-radius: 10px;
+    border-style: solid;
+    margin-bottom: -1px;
+    background: #2e0e8b;
+    ion-col {
+        border: 2px solid rgb(252, 249, 252);
+    }
+}
+
+ion-input {
+    color: #fff;
+}
+
+ion-header {
+    ion-icon {
+        font-size: 30px;
+        position: relative;
+        margin-left: 10px;
+    }
+    #notification-badge-msg {
+        background-color: #2e0e8b;
+        position: absolute;
+        top: 5px;
+        right: 95px;
+        color: #fff;
+        z-index: 111;
+    }
+    #notification-badge {
+        background-color: rgb(7, 161, 233);
+        position: absolute;
+        top: 5px;
+        right: 45px;
+        Color: #fff;
+        z-index: 111;
+    }
+    img {
+        width: 35px;
+        height: 45px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+}
+
+ion-content {
+    --background-color: #2e0e8b;
+    font-family: 'Poppins', sans-serif;
+    .upperBox {
+        background-color: #2e0e8b;
+        margin-top: 10px;
+        box-shadow: rgb(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 40% 35% 15% 10%;
+        grid-template-rows: 15% 35% 35% 15%;
+        gap: 5px 5px;
+        grid-template-areas: "image title title menu" "image orderId orderId orderId" "image amount status status" "image time edit edit";
+        .image {
+            grid-area: image;
+            img {
+                padding: 10px;
+                border-radius: 5px;
+                height: auto;
+                width: 100%;
+            }
+        }
+        .title {
+            color: #f15b3a;
+            grid-area: title;
+            h3 {
+                font-size: 16px;
+            }
+        }
+        .menu {
+            grid-area: menu;
+            //margin-left: -10px;
+            justify-self: center;
+            h3 {
+                margin-right: 10px;
+                color: red;
+            }
+        }
+        .orderId {
+            grid-area: orderId;
+            margin-right: 10px;
+            p {
+                color: #ee9e0b;
+            }
+        }
+        .amount {
+            grid-area: amount;
+            align-self: start;
+            justify-self: start;
+            margin-top: -25px;
+        }
+        .edit {
+            grid-area: edit;
+            margin-top: -30px;
+            margin-right: 20px;
+            .wrapper {
+                height: auto;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #ee9e0b;
+                border-radius: 22px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            .wrapper span {
+                width: 100%;
+                text-align: center;
+                font-size: 22px;
+                font-weight: 600;
+                cursor: pointer;
+                user-select: none;
+            }
+            .wrapper span.num {
+                font-size: 22px;
+                border-right: 2px solid rgba(0, 0, 0, 0.2);
+                border-left: 2px solid rgba(0, 0, 0, 0.2);
+                pointer-events: none;
+                color: rgb(65, 240, 65);
+            }
+        }
+    }
+    #moreItems {
+        text-align: center;
+        color: red;
+    }
+    .order_summary {
+        width: 100%;
+        background-color: #2e0e8b;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        height: auto;
+        padding: 10px;
+        h3 {
+            color: red;
+        }
+        p {
+            color: grey;
+            margin-left: 20px;
+            margin-right: 20px;
+            border-bottom: 1px solid #ee9e0b;
+            span {
+                float: right;
+                margin-right: 10px;
+            }
+        }
+    }
+}

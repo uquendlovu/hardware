@@ -1,0 +1,52 @@
+<ion-content color="secondary" class="ion-text-center">
+<ion-toolbar color="secondary">
+    <p  (click)="gotoHome()">
+        <ion-icon color="light" name="home"></ion-icon>
+            Accommodation 101
+    </p>
+
+</ion-toolbar>
+
+        <div color="secondary" class="card-background-page">
+            <ion-card>
+                <img src="assets/img/background.png">
+                    <div color="secondary" class="card-title">
+                        <h2>We Provide The Best <br> Accommodation For You !</h2>
+                    </div>
+            </ion-card>
+        </div>
+
+</ion-content>
+
+
+<ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="profile">
+            <ion-icon name="person"></ion-icon>
+            <ion-label>PROFILE</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="navigateWelcome()">
+            <ion-icon name="cart-outline"></ion-icon>
+            <ion-label>BOOK</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="about()" >
+            <ion-icon name="aperture"></ion-icon>
+            <ion-label>ABOUT</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="settings">
+            <ion-icon name="settings"></ion-icon>
+            <ion-label>SETTINGS</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="logout()" >
+            <ion-icon name="log-out"></ion-icon>
+            <ion-label>LOGOUT</ion-label>
+        </ion-tab-button>
+
+    </ion-tab-bar>
+
+</ion-tabs>

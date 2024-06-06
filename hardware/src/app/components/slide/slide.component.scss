@@ -1,0 +1,35 @@
+img {
+    align-items: center;
+}
+
+.img1 {
+    width: 99%;
+    height: 20%;
+}
+
+h1 {
+    color: #f5be08;
+    font-size: 44px;
+}
+
+ion-slide {
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+}
+
+.toolbar {
+    width: 100%;
+}
+
+.scroll-content {
+    overflow-y: hidden;
+}
+
+.card-background-page {
+    .buttons {
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+        height: calc(100vh - 55px); // i've added this number of pxls, but you can inspect and get the exact amount of the tab footer
+    }
+}

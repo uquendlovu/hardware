@@ -1,0 +1,39 @@
+ion-header {
+    font-family: 'poppins', sans-serif;
+    ion-icon {
+        font-size: 30px;
+        position: relative;
+        margin-right: 10px;
+    }
+    #notification-badge-msg {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right: 95px;
+        Color: rgb(255, 255, 255);
+        z-index: 111;
+    }
+    #notification-badge {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right: 45px;
+        Color: #fff;
+        z-index: 111;
+    }
+    ion-menu-button {
+        color: #fff;
+    }
+}
+
+ion-content {
+    font-family: 'poppins', sans-serif;
+    --background-color: #f2f2f0;
+    h4 {
+        padding: 5px 0px 0px 20px;
+        color: gray;
+    }
+    ion-icon {
+        font-size: 24px;
+    }
+}

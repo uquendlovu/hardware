@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar color="secondary" style="color:#ffffff;">
+        <ion-button color="light" slot="start" class="menu_btn">
+            <ion-back-button color="secondary" defaultHref="home"></ion-back-button>
+        </ion-button>
+        <ion-title>
+            <h1 align="center">PROFILE</h1>
+        </ion-title>
+
+    </ion-toolbar>
+</ion-header>
+<ion-content color="secondary">
+    <div align="center">
+        <div class="image">
+            <img src="../../../assets/img/user.png" />
+        </div>
+        <div>
+            <ion-item lines="inset" *ngFor="let customer of customers">
+                <ion-label>
+                    <h2> Name:{{customer.name}} </h2>
+                    <h2> Surname:{{customer.surname}} </h2>
+                    <h2> Username:{{customer.username}} </h2>
+                    <h2> Email:{{customer.email}} </h2>
+                    <h2> Contact:{{customer.contact}} </h2>
+                </ion-label>
+            </ion-item>
+        </div>
+
+    </div>
+
+    <div class="UpperBox">
+        <ion-list>
+            <ion-item>
+
+                <ion-label>My Bookings</ion-label>
+                <ion-icon slot="end" name="chevron-forward-outline" (click)=" orders()"></ion-icon>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item>
+
+                <ion-label>Previous Bookings</ion-label>
+                <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Home Address</ion-label>
+                <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <div class="UpperBox">
+        <ion-list>
+
+        </ion-list>
+    </div>
+</ion-content>
